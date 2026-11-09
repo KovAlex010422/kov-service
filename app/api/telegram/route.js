@@ -3,14 +3,22 @@ export async function POST(req) {
     const body = await req.json();
 
     const message = `
-🔔 Нова заявка з сайту KOV Service
+🔔 НОВА ЗАЯВКА
 
-👤 Ім'я: ${body.name}
+👤 Ім'я:
+${body.name}
 
-📞 Телефон: ${body.phone}
+📞 Телефон:
+${body.phone}
 
-📝 Опис:
+📝 Опис робіт:
 ${body.message}
+
+🌐 Сайт:
+KOV Service
+
+🕒 Час:
+${new Date().toLocaleString("uk-UA")}
 `;
 
     const response = await fetch(

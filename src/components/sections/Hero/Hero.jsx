@@ -3,16 +3,14 @@ import HeroCards from "@/src/components/shared/HeroCards";
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-br from-orange-50 via-white to-orange-100 py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-gradient-to-br from-orange-50 via-white to-orange-100 py-12">      <div className="max-w-7xl mx-auto px-6">
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="grid lg:grid-cols-2 gap-8 items-center">
+        {/* Ліва колонка */}
+        <div>
 
-          {/* Ліва колонка */}
-          <div>
-
-            <span
-              className="
+          <span
+            className="
                 inline-block
                 px-4
                 py-2
@@ -22,12 +20,12 @@ export default function Hero() {
                 text-sm
                 font-semibold
               "
-            >
-              Інженерні системи • Будинок • Сад
-            </span>
+          >
+            Інженерні системи • Будинок • Сад
+          </span>
 
-            <h1
-              className="
+          <p
+            className="
                 mt-6
                 text-5xl
                 md:text-7xl
@@ -35,25 +33,25 @@ export default function Hero() {
                 text-slate-900
                 leading-tight
               "
-            >
-              Комплексні послуги
-              для дому та подвір'я
-            </h1>
+          >
+            Комплексні послуги
+            для дому та подвір'я
+          </p>
 
-            <p className="mt-6 text-xl text-slate-600">
-              Електрика, сантехніка,
-              опалення, вентиляція,
-              кондиціонування,
-              автополив та догляд
-              за територією.
-            </p>
+          <p className="mt-6 text-xl text-slate-600">
+            Електрика, сантехніка,
+            опалення, вентиляція,
+            кондиціонування,
+            автополив та догляд
+            за територією.
+          </p>
 
-            {/* Кнопки + контакти */}
-            <div className="mt-10 flex flex-wrap items-center gap-6">
+          {/* Кнопки + контакти */}
+          <div className="mt-4 flex flex-wrap items-center gap-6">
 
-              <a
-                href="#services"
-                className="
+            <a
+              href="#services"
+              className="
                   bg-orange-500
                   hover:bg-orange-600
                   text-white
@@ -62,13 +60,13 @@ export default function Hero() {
                   rounded-xl
                   transition
                 "
-              >
-                Наші послуги
-              </a>
+            >
+              Наші послуги
+            </a>
 
-              <a
-                href={`tel:${company.phone}`}
-                className="
+            <a
+              href={`tel:${company.phone}`}
+              className="
                   border
                   border-orange-500
                   text-orange-500
@@ -78,13 +76,13 @@ export default function Hero() {
                   rounded-xl
                   transition
                 "
-              >
-                Подзвонити
-              </a>
-<div className="mt-4 flex flex-wrap gap-3">
+            >
+              Подзвонити
+            </a>
+            <div className="mt-4 flex flex-wrap gap-3">
 
-  <span
-    className="
+              <span
+                className="
       bg-green-100
       text-green-700
       px-3
@@ -92,12 +90,12 @@ export default function Hero() {
       rounded-full
       text-sm
     "
-  >
-    ⚡ Відповідь протягом дня
-  </span>
+              >
+                ⚡ Відповідь протягом дня
+              </span>
 
-  <span
-    className="
+              <span
+                className="
       bg-orange-100
       text-orange-700
       px-3
@@ -105,49 +103,49 @@ export default function Hero() {
       rounded-full
       text-sm
     "
-  >
-    ✅ Безкоштовна консультація
-  </span>
+              >
+                ✅ Безкоштовна консультація
+              </span>
 
-</div>
-              {/* Локація та графік */}
-              <div className="flex flex-col justify-center">
+            </div>
+            {/* Локація та графік */}
+            <div className="flex flex-col justify-center">
 
-                <p className="font-semibold text-slate-800">
-                  📞 {company.phoneDisplay}
-                </p>
+              <p className="font-semibold text-slate-800">
+                📞 {company.phoneDisplay}
+              </p>
 
-                <p className="text-slate-600">
-                  📍 Гайсин • Ладижин • Тростянець • Немирів • Вінницька область
-                </p>
+              <p className="text-slate-600">
+                📍 {company.location}
+              </p>
 
-                <p className="text-slate-600">
-                  🕒 {company.workTime}
-                </p>
-
-              </div>
+              <p className="text-slate-600">
+                🕒 {company.workTime}
+              </p>
 
             </div>
 
           </div>
 
-          {/* ====================================== */}
-          {/* МІСЦЕ ДЛЯ ГОЛОВНОГО ФОТО */}
-          {/* ====================================== */}
-          {/*
+        </div>
+
+        {/* ====================================== */}
+        {/* МІСЦЕ ДЛЯ ГОЛОВНОГО ФОТО */}
+        {/* ====================================== */}
+        {/*
             КОЛИ БУДЕ ФОТО:
 
             public/images/hero.jpg
 
             Замінити цей блок на компонент Image
           */}
-          {/* ====================================== */}
+        {/* ====================================== */}
 
-          <HeroCards />
-
-        </div>
+        <HeroCards />
 
       </div>
+
+    </div>
     </section>
   );
 }

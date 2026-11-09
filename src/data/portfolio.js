@@ -1,38 +1,43 @@
 export const portfolio = [
   {
     id: 1,
-    title: "Система автополиву",
-    icon: "💧",
-    image: null,
+    title: "Квітник - до робіт",
+    icon: "🌺",
+    image: "/portfolio/landscape/flowerbed/before.jpg",
   },
+
   {
     id: 2,
-    title: "Електромонтажні роботи",
-    icon: "⚡",
-    image: null,
+    title: "Квітник - після робіт",
+    icon: "🌺",
+    image: "/portfolio/landscape/flowerbed/after1.jpg",
   },
+
   {
     id: 3,
-    title: "Монтаж кондиціонера",
-    icon: "❄️",
-    image: null,
+    title: "Квітник - після робіт",
+    icon: "🌺",
+    image: "/portfolio/landscape/flowerbed/after2.jpg",
   },
+
   {
     id: 4,
-    title: "Сантехнічні роботи",
-    icon: "🚿",
-    image: null,
+    title: "Вичесування газону",
+    icon: "🌱",
+    image: "/portfolio/landscape/lawn/scarification/process1.jpg",
   },
+
   {
     id: 5,
-    title: "Догляд за газоном",
+    title: "Вичесування газону",
     icon: "🌱",
-    image: null,
+    image: "/portfolio/landscape/lawn/scarification/process2.jpg",
   },
+
   {
     id: 6,
-    title: "Обрізка дерев",
-    icon: "🌳",
-    image: null,
+    title: "Вичесування газону",
+    icon: "🌱",
+    image: "/portfolio/landscape/lawn/scarification/process3.jpg",
   },
 ];
