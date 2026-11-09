@@ -8,7 +8,7 @@ export const company = {
 
   phoneDisplay: "+38 (067) 123 45 67",
 
-  telegram: "https://t.me/your_username",
+ telegram: "https://t.me/KovAlex010422",
 
   viber: "viber://chat?number=%2B380671234567",
 

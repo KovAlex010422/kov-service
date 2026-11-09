@@ -52,9 +52,33 @@ export default function Header() {
                 {/* Логотип */}
                 <Link
                     href="/"
-                    className="text-2xl font-bold text-orange-500"
+                    className="flex items-center gap-3"
                 >
-                    {company.name}
+                    <div
+                        className="
+      w-10
+      h-10
+      rounded-xl
+      bg-orange-500
+      text-white
+      flex
+      items-center
+      justify-center
+      font-bold
+    "
+                    >
+                        K
+                    </div>
+
+                    <div>
+                        <div className="font-bold text-slate-900">
+                            KOV Service
+                        </div>
+
+                        <div className="text-xs text-slate-500">
+                            Дім • Сад • Сервіс
+                        </div>
+                    </div>
                 </Link>
 
                 {/* ПК меню */}

@@ -81,16 +81,50 @@ export default function Hero() {
               >
                 Подзвонити
               </a>
+<div className="mt-4 flex flex-wrap gap-3">
 
+  <span
+    className="
+      bg-green-100
+      text-green-700
+      px-3
+      py-1
+      rounded-full
+      text-sm
+    "
+  >
+    ⚡ Відповідь протягом дня
+  </span>
+
+  <span
+    className="
+      bg-orange-100
+      text-orange-700
+      px-3
+      py-1
+      rounded-full
+      text-sm
+    "
+  >
+    ✅ Безкоштовна консультація
+  </span>
+
+</div>
               {/* Локація та графік */}
               <div className="flex flex-col justify-center">
+
+                <p className="font-semibold text-slate-800">
+                  📞 {company.phoneDisplay}
+                </p>
+
                 <p className="text-slate-600">
-                  📍 {company.location}
+                  📍 Гайсин • Ладижин • Тростянець • Немирів • Вінницька область
                 </p>
 
                 <p className="text-slate-600">
                   🕒 {company.workTime}
                 </p>
+
               </div>
 
             </div>
