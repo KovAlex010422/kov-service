@@ -6,6 +6,7 @@ import Portfolio from "@/src/components/sections/Portfolio/Portfolio";
 import Contacts from "@/src/components/sections/Contacts/Contacts";
 import Footer from "@/src/components/sections/Footer/Footer";
 import FloatingPhone from "@/src/components/shared/FloatingPhone";
+import Reviews from "@/src/components/sections/Reviews/Reviews";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Services />
       <Advantages />
       <Portfolio />
+      <Reviews />
       <Contacts />
       <Footer />
       <FloatingPhone />

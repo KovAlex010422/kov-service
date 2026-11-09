@@ -25,6 +25,10 @@ const menuItems = [
         href: "#portfolio",
     },
     {
+        name: "Відгуки",
+        href: "#reviews",
+    },
+    {
         name: "Контакти",
         href: "#contacts",
     },

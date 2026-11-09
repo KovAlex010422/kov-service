@@ -60,7 +60,7 @@ export default function Portfolio() {
                                     >
                                         <div className="text-center">
                                             <div className="text-6xl mb-4">
-                                                📷
+                                                {item.icon}
                                             </div>
 
                                             <div className="font-semibold">

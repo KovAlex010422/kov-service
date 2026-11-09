@@ -1,4 +1,5 @@
 import { company } from "@/src/data/company";
+import HeroCards from "@/src/components/shared/HeroCards";
 
 export default function Hero() {
   return (
@@ -108,39 +109,7 @@ export default function Hero() {
           */}
           {/* ====================================== */}
 
-          <div
-            className="
-              h-[450px]
-              rounded-3xl
-              border-2
-              border-dashed
-              border-orange-300
-              bg-orange-50
-              flex
-              items-center
-              justify-center
-              text-center
-              p-8
-            "
-          >
-            <div>
-
-              <div className="text-6xl mb-4">
-                🏠
-              </div>
-
-              <h3 className="text-2xl font-semibold text-slate-800">
-                Головне фото сайту
-              </h3>
-
-              <p className="mt-3 text-slate-500">
-                Тут буде фото будинку,
-                автополиву, саду або
-                виконаних робіт.
-              </p>
-
-            </div>
-          </div>
+          <HeroCards />
 
         </div>
 
