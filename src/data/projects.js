@@ -2,7 +2,7 @@ export const projects = [
   {
     id: "flowerbed-1",
 
-    title: "Flower Bed #1",
+    title: "Decorative Flower Bed",
 
     category: "Landscape",
 
@@ -20,7 +20,7 @@ export const projects = [
   },
 
   {
-    id: "lawn-restoration-1",
+    id: "lawn-scarification-1",
 
     title: "Lawn Scarification",
 
@@ -36,6 +36,26 @@ export const projects = [
       "/portfolio/landscape/lawn/scarification/process1.jpg",
       "/portfolio/landscape/lawn/scarification/process2.jpg",
       "/portfolio/landscape/lawn/scarification/process3.jpg",
+    ],
+  },
+
+  {
+    id: "turf-laying-1",
+
+    title: "Turf Laying",
+
+    category: "Lawn Care",
+
+    description:
+      "Professional turf laying service to create a beautiful and healthy lawn.",
+
+    cover:
+      "/portfolio/landscape/lawn/turf_laying_1/process1.jpg",
+
+    images: [
+      "/portfolio/landscape/lawn/turf_laying_1/process1.jpg",
+      "/portfolio/landscape/lawn/turf_laying_1/process2.jpg",
+      "/portfolio/landscape/lawn/turf_laying_1/process3.jpg",
     ],
   },
 ];
