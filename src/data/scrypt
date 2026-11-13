@@ -1,0 +1,160 @@
+
+1. Створіть файл скрипту
+
+Створіть у корені вашого проєкту (або в папці scripts/) файл generate-portfolio.mjs і вставте туди цей код:
+javascript
+import fs from "fs";
+import path from "path";
+
+const PORTFOLIO_DIR = path.join(process.cwd(), "public", "portfolio");
+const OUTPUT_FILE = path.join(process.cwd(), "src", "data", "projects.js"); // Змініть шлях, якщо ваш файл лежить в іншому місці
+
+// Словник гарних назв, категорій та описів (можна доповнювати новими ключами)
+const METADATA = {
+  furniture_assembly: {
+    title: "Furniture Assembly",
+    category: "Apartment Repairs",
+    description: "Professional assembly and installation of modern home furniture.",
+  },
+  laying_tiles_on_walls: {
+    title: "Wall Tile Laying",
+    category: "Apartment Repairs",
+    description: "Precision wall tiling work for a clean and durable interior finish.",
+  },
+  underfloor_heating: {
+    title: "Underfloor Heating Installation",
+    category: "Apartment Repairs",
+    description: "Complete installation of an efficient underfloor heating system.",
+  },
+  flowerbeds: {
+    title: "Decorative Flower Bed",
+    category: "Landscape",
+    description: "Renovation of a decorative flower bed with planting and landscape improvements.",
+  },
+  scarification: {
+    title: "Lawn Scarification",
+    category: "Lawn Care",
+    description: "Professional lawn scarification and cleaning process to improve grass health and growth.",
+  },
+  turf_laying: {
+    title: "Turf Laying",
+    category: "Lawn Care",
+    description: "Professional turf laying service to create a beautiful and healthy lawn.",
+  },
+};
+
+// Допоміжна функція для форматування назви, якщо її ще немає в словнику METADATA
+function formatTitle(slug) {
+  return slug
+    .replace(/_\d+$/, "")
+    .split("_")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+// Рекурсивний пошук усіх папок, у яких лежать зображення
+function getProjectDirectories(dir, list = []) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  const hasImages = entries.some(
+    (entry) => entry.isFile() && /\.(jpg|jpeg|png|webp)$/i.test(entry.name)
+  );
+
+  if (hasImages) {
+    list.push(dir);
+  }
+
+  for (const entry of entries) {
+    if (entry.isDirectory()) {
+      getProjectDirectories(path.join(dir, entry.name), list);
+    }
+  }
+
+  return list;
+}
+
+function generateProjects() {
+  if (!fs.existsSync(PORTFOLIO_DIR)) {
+    console.error(`Помилка: Папку ${PORTFOLIO_DIR} не знайдено.`);
+    process.exit(1);
+  }
+
+  const projectDirs = getProjectDirectories(PORTFOLIO_DIR);
+
+  const projects = projectDirs.map((dirPath) => {
+    // Отримуємо відносний шлях, наприклад: "landscape/flowerbeds/flowerbed_1"
+    const relativePath = path.relative(PORTFOLIO_DIR, dirPath).replace(/\\/g, "/");
+    const parts = relativePath.split("/");
+    const folderName = parts[parts.length - 1];
+    const parentFolder = parts.length > 1 ? parts[parts.length - 2] : "";
+
+    // Генеруємо ID (замінюємо "_" на "-" і додаємо "-1", якщо номера немає в назві папки)
+    let id = folderName.replace(/_/g, "-");
+    if (!/\d+$/.test(id)) {
+      id += "-1";
+    }
+
+    // Визначаємо базовий ключ для пошуку метаданих (наприклад, "turf_laying_2" -> "turf_laying")
+    const baseKey = folderName.replace(/_\d+$/, "");
+    const meta = METADATA[baseKey] || METADATA[parentFolder] || {};
+
+    // Зчитуємо та природно сортуємо зображення (process1, process2, ..., process10)
+    const files = fs
+      .readdirSync(dirPath)
+      .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+
+    const images = files.map((file) => `/portfolio/${relativePath}/${file}`);
+
+    // Пріоритет для обкладинки: фото "after" -> останнє фото "process" -> перше доступне фото
+    const afterImages = images.filter((img) => img.includes("/after"));
+    const cover =
+      afterImages.length > 0
+        ? afterImages[afterImages.length - 1]
+        : images[images.length - 1] || "";
+
+    return {
+      id,
+      title: meta.title || formatTitle(folderName),
+      category: meta.category || formatTitle(parts[0]),
+      description:
+        meta.description || `Completed ${formatTitle(folderName).toLowerCase()} project.`,
+      cover,
+      images,
+    };
+  });
+
+  // Створюємо цільову директорію, якщо її ще немає
+  fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
+
+  const fileContent = `// Цей файл згенеровано автоматично. Не редагуйте його вручну.\nexport const projects = ${JSON.stringify(
+    projects,
+    null,
+    2
+  )};\n`;
+
+  fs.writeFileSync(OUTPUT_FILE, fileContent, "utf-8");
+  console.log(`Готово! Успішно згенеровано ${projects.length} проєктів у ${OUTPUT_FILE}`);
+}
+
+generateProjects();
+Будьте обачні, використовуючи код.
+
+2. Як користуватися скриптом
+
+• Запуск вручну. Виконайте в терміналі команду:bash
+node generate-portfolio.mjs
+Будьте обачні, використовуючи код.
+• Автоматизація під час збірки (package.json). Додайте команду у блок "scripts" вашого package.json, щоб список оновлювався автоматично перед кожним запуском або білдом сайту:json
+"scripts": {
+  "generate:portfolio": "node generate-portfolio.mjs",
+  "dev": "npm run generate:portfolio && next dev",
+  "build": "npm run generate:portfolio && next build"
+}
+Будьте обачні, використовуючи код.
+
+Особливості роботи скрипту
+
+• Розумне сортування. Використовується numeric: true, тому якщо у вас з'явиться 10 фотографій, process10.jpg стане після process9.jpg, а не після process1.jpg.
+• Автовибір обкладинки (cover). Якщо в папці є файли зі словом after (як у flowerbed_1), скрипт автоматично візьме останній із них на обкладинку; в інших випадках — останнє фото процесу.
+• Резервні назви. Якщо ви додасте нову папку (наприклад, painting_walls_1), якої ще немає у словнику METADATA, скрипт не впаде, а сам сформує назву "Painting Walls" і підставить категорію з батьківської папки.
+Підкажіть, який шлях до файлу з масивом projects використовується у вашому проєкті та чи потрібна підтримка кількох мов (наприклад, англійської та української) всередині об'єктів?
