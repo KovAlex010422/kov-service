@@ -13,9 +13,9 @@ export const projects = [
       "/portfolio/landscape/flowerbed/after2.jpg",
 
     images: [
-      "/portfolio/landscape/flowerbed/before.jpg",
-      "/portfolio/landscape/flowerbed/after1.jpg",
-      "/portfolio/landscape/flowerbed/after2.jpg",
+      "/portfolio/landscape/flowerbeds/before.jpg",
+      "/portfolio/landscape/flowerbeds/after1.jpg",
+      "/portfolio/landscape/flowerbeds/after2.jpg",
     ],
   },
 
