@@ -92,7 +92,10 @@ export default function RequestForm() {
       return;
     }
 
-    const phoneNumbers = form.phone.replace(/\D/g, "");
+    const phoneNumbers = form.phone.replace(
+      /\D/g,
+      ""
+    );
 
     if (phoneNumbers.length < 12) {
       setStatus(
@@ -129,11 +132,6 @@ export default function RequestForm() {
 
       const data = await response.json();
 
-      console.log(
-        "SERVER RESPONSE:",
-        data
-      );
-
       if (data.success) {
         setStatus(
           "✅ Заявку успішно надіслано!"
@@ -150,14 +148,14 @@ export default function RequestForm() {
         }, 5000);
       } else {
         setStatus(
-          JSON.stringify(data)
+          "❌ Помилка надсилання заявки."
         );
       }
     } catch (error) {
       console.error(error);
 
       setStatus(
-        `❌ ${error.message}`
+        "❌ Не вдалося надіслати заявку."
       );
     }
 
@@ -176,8 +174,7 @@ export default function RequestForm() {
         </h2>
 
         <p className="text-center text-slate-600 mb-10">
-          Залиште заявку і ми
-          зв'яжемося з вами
+          Залиште заявку і ми зв'яжемося з вами
         </p>
 
         <form
@@ -247,16 +244,18 @@ export default function RequestForm() {
               type="submit"
               disabled={loading}
               className="
-                w-full
-                bg-orange-500
-                hover:bg-orange-600
-                disabled:opacity            disabled:cursor-not-allowed
-                text-white
-                py-4
-                rounded-xl
-                transition
-              "
+    w-full
+    bg-orange-500
+    hover:bg-orange-600
+    disabled:opacity-50
+    disabled:cursor-not-allowed
+    text-white
+    py-4
+    rounded-xl
+    transition
+  "
             >
+
               {loading
                 ? "Надсилання..."
                 : "Надіслати заявку"}
@@ -264,15 +263,18 @@ export default function RequestForm() {
 
             {status && (
               <div
-                className="
+                className={`
                   mt-4
                   p-4
                   rounded-xl
                   border
                   text-center
                   font-medium
-                  break-words
-                "
+                  ${status.startsWith("✅")
+                    ? "bg-green-50 border-green-200 text-green-700"
+                    : "bg-red-50 border-red-200 text-red-700"
+                  }
+                `}
               >
                 {status}
               </div>
@@ -281,7 +283,7 @@ export default function RequestForm() {
           </div>
         </form>
 
-      </div>
-    </section>
+      </div >
+    </section >
   );
 }
