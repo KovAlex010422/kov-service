@@ -271,10 +271,9 @@ export default function RequestForm() {
                   border
                   text-center
                   font-medium
-                  ${
-                    status.startsWith("✅")
-                      ? "bg-green-50 border-green-200 text-green-700"
-                      : "bg-red-50 border-red-200 text-red-700"
+                  ${status.startsWith("✅")
+                    ? "bg-green-50 border-green-200 text-green-700"
+                    : "bg-red-50 border-red-200 text-red-700"
                   }
                 `}
               >

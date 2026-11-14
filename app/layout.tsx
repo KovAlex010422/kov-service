@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "KOV Service | Електрика, сантехніка, опалення та автополив",
+  title: "KOV Service | Електрика, сантехніка, опалення, автополив та ландшафтні роботи у Гайсині",
 
   description:
     "Професійні послуги електрика, сантехніка, опалення, вентиляції, кондиціонування, автополиву та догляду за територією. Гайсин та область.",
@@ -42,13 +42,18 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="uk"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }

@@ -3,8 +3,10 @@ import Image from "next/image";
 import { projects } from "@/src/data/projects";
 
 export default function FeaturedProjects() {
-  const featured = projects.slice(0, 3);
 
+  const featured = projects.filter(
+    (project) => project.featured
+  );
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">

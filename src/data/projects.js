@@ -1,12 +1,21 @@
 export const projects = [
   {
     id: "furniture-assembly-1",
-    title: "Furniture Assembly",
-    category: "Apartment Repairs",
+
+    title: "Збирання меблів",
+
+    category: "Ремонт квартир",
+
+    year: "2026",
+
+    featured: true,
+
     description:
-      "Professional assembly and installation of modern home furniture.",
+      "Професійне складання та встановлення меблів для житлових приміщень.",
+
     cover:
       "/portfolio/apartment_repairs/furniture_assembly/furniture_assembly_1/process1.jpg",
+
     images: [
       "/portfolio/apartment_repairs/furniture_assembly/furniture_assembly_1/process1.jpg",
     ],
@@ -14,12 +23,21 @@ export const projects = [
 
   {
     id: "laying-tiles-on-walls-1",
-    title: "Wall Tile Laying",
-    category: "Apartment Repairs",
+
+    title: "Укладання плитки на стіни",
+
+    category: "Ремонт квартир",
+
+    year: "2026",
+
+    featured: true,
+
     description:
-      "Precision wall tiling work for a clean and durable interior finish.",
+      "Якісне облицювання стін керамічною плиткою з точним дотриманням геометрії.",
+
     cover:
       "/portfolio/apartment_repairs/laying_tiles_on_walls/laying_tiles_on_walls_1/process1.jpg",
+
     images: [
       "/portfolio/apartment_repairs/laying_tiles_on_walls/laying_tiles_on_walls_1/process1.jpg",
     ],
@@ -27,12 +45,21 @@ export const projects = [
 
   {
     id: "underfloor-heating-1",
-    title: "Underfloor Heating Installation",
-    category: "Apartment Repairs",
+
+    title: "Монтаж теплої підлоги",
+
+    category: "Ремонт квартир",
+
+    year: "2026",
+
+    featured: true,
+
     description:
-      "Complete installation of an efficient underfloor heating system.",
+      "Монтаж сучасної системи теплої підлоги для ефективного та комфортного опалення.",
+
     cover:
       "/portfolio/apartment_repairs/underfloor_heating/underfloor_heating_1/process3.jpg",
+
     images: [
       "/portfolio/apartment_repairs/underfloor_heating/underfloor_heating_1/process1.jpg",
       "/portfolio/apartment_repairs/underfloor_heating/underfloor_heating_1/process2.jpg",
@@ -42,12 +69,21 @@ export const projects = [
 
   {
     id: "flowerbed-1",
-    title: "Decorative Flower Bed",
-    category: "Landscape",
+
+    title: "Декоративна клумба",
+
+    category: "Ландшафтні роботи",
+
+    year: "2026",
+
+    featured: true,
+
     description:
-      "Renovation of a decorative flower bed with planting and landscape improvements.",
+      "Оновлення клумби з висадкою рослин та декоративним оформленням.",
+
     cover:
       "/portfolio/landscape/flowerbeds/flowerbed_1/after2.jpg",
+
     images: [
       "/portfolio/landscape/flowerbeds/flowerbed_1/before.jpg",
       "/portfolio/landscape/flowerbeds/flowerbed_1/after1.jpg",
@@ -57,12 +93,21 @@ export const projects = [
 
   {
     id: "flowerbed-2",
-    title: "Garden Flower Bed Arrangement",
-    category: "Landscape",
+
+    title: "Оформлення садової клумби",
+
+    category: "Ландшафтні роботи",
+
+    year: "2026",
+
+    featured: false,
+
     description:
-      "Landscaping and arrangement of a decorative flower bed.",
+      "Створення та оформлення декоративної клумби на території приватного будинку.",
+
     cover:
       "/portfolio/landscape/flowerbeds/flowerbed_2/process1.jpg",
+
     images: [
       "/portfolio/landscape/flowerbeds/flowerbed_2/process1.jpg",
     ],
@@ -70,12 +115,21 @@ export const projects = [
 
   {
     id: "flowerbed-3",
-    title: "Backyard Flower Bed Design",
-    category: "Landscape",
+
+    title: "Клумба на присадибній ділянці",
+
+    category: "Ландшафтні роботи",
+
+    year: "2026",
+
+    featured: false,
+
     description:
-      "Creating and planting a structured garden flower bed.",
+      "Розробка та реалізація декоративної квіткової композиції.",
+
     cover:
       "/portfolio/landscape/flowerbeds/flowerbed_3/process2.jpg",
+
     images: [
       "/portfolio/landscape/flowerbeds/flowerbed_3/process1.jpg",
       "/portfolio/landscape/flowerbeds/flowerbed_3/process2.jpg",
@@ -84,12 +138,21 @@ export const projects = [
 
   {
     id: "lawn-scarification-1",
-    title: "Lawn Scarification",
-    category: "Lawn Care",
+
+    title: "Вичісування газону",
+
+    category: "Догляд за газоном",
+
+    year: "2026",
+
+    featured: true,
+
     description:
-      "Professional lawn scarification and cleaning process to improve grass health and growth.",
+      "Професійне вичісування газону для покращення росту та стану трави.",
+
     cover:
       "/portfolio/landscape/lawn/scarification/process1.jpg",
+
     images: [
       "/portfolio/landscape/lawn/scarification/process1.jpg",
       "/portfolio/landscape/lawn/scarification/process2.jpg",
@@ -99,12 +162,21 @@ export const projects = [
 
   {
     id: "turf-laying-1",
-    title: "Turf Laying",
-    category: "Lawn Care",
+
+    title: "Укладання рулонного газону",
+
+    category: "Догляд за газоном",
+
+    year: "2026",
+
+    featured: true,
+
     description:
-      "Professional turf laying service to create a beautiful and healthy lawn.",
+      "Підготовка ділянки та укладання нового рулонного газону.",
+
     cover:
       "/portfolio/landscape/lawn/turf_laying_1/process1.jpg",
+
     images: [
       "/portfolio/landscape/lawn/turf_laying_1/process1.jpg",
       "/portfolio/landscape/lawn/turf_laying_1/process2.jpg",
@@ -114,12 +186,21 @@ export const projects = [
 
   {
     id: "turf-laying-2",
-    title: "Lawn Turf Installation",
-    category: "Lawn Care",
+
+    title: "Монтаж нового газону",
+
+    category: "Догляд за газоном",
+
+    year: "2026",
+
+    featured: false,
+
     description:
-      "Preparation and laying of fresh natural turf for an even green lawn.",
+      "Створення рівного та густого газону з натурального покриття.",
+
     cover:
       "/portfolio/landscape/lawn/turf_laying_2/process1.jpg",
+
     images: [
       "/portfolio/landscape/lawn/turf_laying_2/process1.jpg",
     ],
@@ -127,12 +208,21 @@ export const projects = [
 
   {
     id: "turf-laying-3",
-    title: "Residential Turf Laying",
-    category: "Lawn Care",
+
+    title: "Газон для приватного подвір'я",
+
+    category: "Догляд за газоном",
+
+    year: "2026",
+
+    featured: false,
+
     description:
-      "Full-cycle rolled turf installation for a residential yard.",
+      "Повний цикл підготовки основи та укладання рулонного газону.",
+
     cover:
       "/portfolio/landscape/lawn/turf_laying_3/process4.jpg",
+
     images: [
       "/portfolio/landscape/lawn/turf_laying_3/process1.jpg",
       "/portfolio/landscape/lawn/turf_laying_3/process2.jpg",
