@@ -10,7 +10,6 @@ export default function RequestForm() {
   });
 
   const [loading, setLoading] = useState(false);
-
   const [status, setStatus] = useState("");
 
   const formatPhone = (value) => {
@@ -93,10 +92,7 @@ export default function RequestForm() {
       return;
     }
 
-    const phoneNumbers = form.phone.replace(
-      /\D/g,
-      ""
-    );
+    const phoneNumbers = form.phone.replace(/\D/g, "");
 
     if (phoneNumbers.length < 12) {
       setStatus(
@@ -132,7 +128,11 @@ export default function RequestForm() {
       );
 
       const data = await response.json();
-      console.log(data);
+
+      console.log(
+        "SERVER RESPONSE:",
+        data
+      );
 
       if (data.success) {
         setStatus(
@@ -150,14 +150,14 @@ export default function RequestForm() {
         }, 5000);
       } else {
         setStatus(
-          "❌ Помилка надсилання."
+          JSON.stringify(data)
         );
       }
     } catch (error) {
       console.error(error);
 
       setStatus(
-        "❌ Не вдалося відправити заявку."
+        `❌ ${error.message}`
       );
     }
 
@@ -250,8 +250,7 @@ export default function RequestForm() {
                 w-full
                 bg-orange-500
                 hover:bg-orange-600
-                disabled:opacity-50
-                disabled:cursor-not-allowed
+                disabled:opacity            disabled:cursor-not-allowed
                 text-white
                 py-4
                 rounded-xl
@@ -265,18 +264,15 @@ export default function RequestForm() {
 
             {status && (
               <div
-                className={`
+                className="
                   mt-4
                   p-4
                   rounded-xl
                   border
                   text-center
                   font-medium
-                  ${status.startsWith("✅")
-                    ? "bg-green-50 border-green-200 text-green-700"
-                    : "bg-red-50 border-red-200 text-red-700"
-                  }
-                `}
+                  break-words
+                "
               >
                 {status}
               </div>

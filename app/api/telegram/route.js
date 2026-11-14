@@ -2,6 +2,41 @@ export async function POST(req) {
   try {
     const body = await req.json();
 
+    const token = process.env.TELEGRAM_BOT_TOKEN;
+    const chatId = process.env.TELEGRAM_CHAT_ID;
+
+    if (!token) {
+      console.error(
+        "TELEGRAM_BOT_TOKEN is missing"
+      );
+
+      return Response.json(
+        {
+          success: false,
+          error: "Missing bot token",
+        },
+        {
+          status: 500,
+        }
+      );
+    }
+
+    if (!chatId) {
+      console.error(
+        "TELEGRAM_CHAT_ID is missing"
+      );
+
+      return Response.json(
+        {
+          success: false,
+          error: "Missing chat id",
+        },
+        {
+          status: 500,
+        }
+      );
+    }
+
     const message = `
 🔔 НОВА ЗАЯВКА
 
@@ -11,45 +46,56 @@ ${body.name}
 📞 Телефон:
 ${body.phone}
 
-📝 Опис робіт:
+📝 Опис:
 ${body.message}
-
-🌐 Сайт:
-KOV Service
 
 🕒 Час:
 ${new Date().toLocaleString("uk-UA")}
 `;
 
     const response = await fetch(
-      `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
+      `https://api.telegram.org/bot${token}/sendMessage`,
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type":
+            "application/json",
         },
         body: JSON.stringify({
-          chat_id: process.env.TELEGRAM_CHAT_ID,
+          chat_id: chatId,
           text: message,
         }),
       }
     );
 
-const result = await response.json();
+    const result = await response.json();
 
-console.log(result);
+    console.log(
+      "Telegram response:",
+      result
+    );
 
-if (!response.ok) {
-  return Response.json({
-    success: false,
-    telegram: result,
-  });
-}
+    if (!response.ok) {
+      return Response.json(
+        {
+          success: false,
+          telegram: result,
+        },
+        {
+          status: 500,
+        }
+      );
+    }
 
-return Response.json({
-  success: true,
-});
-  } catch {
+    return Response.json({
+      success: true,
+    });
+  } catch (error) {
+    console.error(
+      "Telegram route error:",
+      error
+    );
+
     return Response.json(
       {
         success: false,
@@ -59,4 +105,17 @@ return Response.json({
       }
     );
   }
+
+  return Response.json({
+    token:
+      process.env.TELEGRAM_BOT_TOKEN
+        ? "OK"
+        : "MISSING",
+
+    chat:
+      process.env.TELEGRAM_CHAT_ID
+        ? "OK"
+        : "MISSING",
+  });
+
 }
