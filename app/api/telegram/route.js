@@ -35,13 +35,20 @@ ${new Date().toLocaleString("uk-UA")}
       }
     );
 
-    if (!response.ok) {
-      throw new Error("Telegram error");
-    }
+const result = await response.json();
 
-    return Response.json({
-      success: true,
-    });
+console.log(result);
+
+if (!response.ok) {
+  return Response.json({
+    success: false,
+    telegram: result,
+  });
+}
+
+return Response.json({
+  success: true,
+});
   } catch {
     return Response.json(
       {
