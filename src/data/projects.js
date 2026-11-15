@@ -309,12 +309,14 @@ export const projects = [
     featured: true,
 
     description:
-      "Відео процесу трансформації та формування ялівцю.",
+      "Формування та декоративна стрижка ялівцю з наданням нової форми крони.",
 
     cover:
-      "/portfolio/tree-care/juniper-transformation/cover.jpg",
+      "/portfolio/tree-care/juniper-transformation/cover.png",
 
-    images: [],
+    images: [
+      "/portfolio/tree-care/juniper-transformation/cover.png",
+    ],
 
     videos: [
       "https://www.youtube.com/embed/Dh7F6F41Y4w",

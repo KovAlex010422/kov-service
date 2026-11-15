@@ -1,44 +1,31 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import Header from "@/src/components/layout/Header";
 import Footer from "@/src/components/sections/Footer/Footer";
+import Gallery from "@/src/components/portfolio/Gallery";
 
 import { projects } from "@/src/data/projects";
 
-export default function ProjectPage({
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.id,
+  }));
+}
+
+export default async function ProjectPage({
   params,
 }) {
+  const { slug } = await params;
+
   const project = projects.find(
-    (item) => item.id === params.slug
+    (item) => item.id === slug
   );
 
   if (!project) {
     notFound();
   }
-
-  const [selectedIndex, setSelectedIndex] =
-    useState(null);
-
-  const nextImage = () => {
-    setSelectedIndex((prev) =>
-      prev === project.images.length - 1
-        ? 0
-        : prev + 1
-    );
-  };
-
-  const prevImage = () => {
-    setSelectedIndex((prev) =>
-      prev === 0
-        ? project.images.length - 1
-        : prev - 1
-    );
-  };
 
   return (
     <>
@@ -76,45 +63,19 @@ export default function ProjectPage({
           </p>
 
           {project.images?.length > 0 && (
-            <div className="grid md:grid-cols-2 gap-6">
-
-              {project.images.map(
-                (image, index) => (
-                  <div
-                    key={image}
-                    onClick={() =>
-                      setSelectedIndex(index)
-                    }
-                    className="
-                      relative
-                      h-[400px]
-                      overflow-hidden
-                      rounded-2xl
-                      cursor-pointer
-                    "
-                  >
-                    <Image
-                      src={image}
-                      alt={project.title}
-                      fill
-                      sizes="50vw"
-                      className="object-cover hover:scale-105 transition"
-                    />
-                  </div>
-                )
-              )}
-
-            </div>
+            <Gallery
+              images={project.images}
+              title={project.title}
+            />
           )}
 
           {project.videos?.length > 0 && (
             <>
-              <h2 className="text-3xl font-bold mt-16 mb-6">
+              <h2 className="text-3xl font-bold mb-6">
                 Відео роботи
               </h2>
 
               <div className="space-y-8">
-
                 {project.videos.map(
                   (video, index) => (
                     <iframe
@@ -131,7 +92,6 @@ export default function ProjectPage({
                     />
                   )
                 )}
-
               </div>
             </>
           )}
@@ -140,95 +100,6 @@ export default function ProjectPage({
       </main>
 
       <Footer />
-
-      {selectedIndex !== null &&
-        project.images?.length > 0 && (
-          <div
-            onClick={() =>
-              setSelectedIndex(null)
-            }
-            className="
-              fixed
-              inset-0
-              z-[999]
-              bg-black/95
-              flex
-              items-center
-              justify-center
-              p-4
-            "
-          >
-            <div
-              className="
-                relative
-                w-full
-                h-full
-              "
-              onClick={(e) =>
-                e.stopPropagation()
-              }
-            >
-              <Image
-                src={
-                  project.images[selectedIndex]
-                }
-                alt={project.title}
-                fill
-                sizes="100vw"
-                className="object-contain"
-              />
-
-              <button
-                onClick={() =>
-                  setSelectedIndex(null)
-                }
-                className="
-                  absolute
-                  top-6
-                  right-6
-                  w-12
-                  h-12
-                  bg-white
-                  rounded-full
-                "
-              >
-                ✕
-              </button>
-
-              <button
-                onClick={prevImage}
-                className="
-                  absolute
-                  left-6
-                  top-1/2
-                  -translate-y-1/2
-                  w-14
-                  h-14
-                  bg-white
-                  rounded-full
-                "
-              >
-                ←
-              </button>
-
-              <button
-                onClick={nextImage}
-                className="
-                  absolute
-                  right-6
-                  top-1/2
-                  -translate-y-1/2
-                  w-14
-                  h-14
-                  bg-white
-                  rounded-full
-                "
-              >
-                →
-              </button>
-            </div>
-          </div>
-        )}
     </>
   );
 }
