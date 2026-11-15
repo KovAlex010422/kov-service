@@ -47,7 +47,7 @@ export default function PortfolioPage() {
                       src={project.cover}
                       alt={project.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width:768px) 100vw, 33vw"
                       className="object-cover"
                     />
 

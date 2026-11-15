@@ -230,4 +230,94 @@ export const projects = [
       "/portfolio/landscape/lawn/turf_laying_3/process4.jpg",
     ],
   },
+  {
+  id: "repair-wall-1",
+
+  title: "Ремонт стіни",
+
+  category: "Ремонт квартир",
+
+  year: "2026",
+
+  featured: false,
+
+  description:
+    "Відновлення та підготовка стіни під подальше оздоблення.",
+
+  cover:
+    "/portfolio/apartment_repairs/repair_wall/process1.jpg",
+
+  images: [
+    "/portfolio/apartment_repairs/repair_wall/process1.jpg",
+    "/portfolio/apartment_repairs/repair_wall/process2.jpg",
+    "/portfolio/apartment_repairs/repair_wall/process3.jpg",
+  ],
+},
+{
+  id: "heating-boiler-replacement-1",
+
+  title: "Заміна котла опалення",
+
+  category: "Опалення",
+
+  year: "2026",
+
+  featured: true,
+
+  description:
+    "Демонтаж старого та встановлення нового котла опалення.",
+
+  cover:
+    "/portfolio/apartment_repairs/heating_boiler_replacement/process2.jpg",
+
+  images: [
+    "/portfolio/apartment_repairs/heating_boiler_replacement/process2.jpg",
+  ],
+},
+{
+  id: "store-ventilation-1",
+
+  title: "Вентиляція магазину",
+
+  category: "Вентиляція",
+
+  year: "2026",
+
+  featured: true,
+
+  description:
+    "Монтаж системи вентиляції для комерційного приміщення.",
+
+  cover:
+    "/portfolio/ventilation/store_ventilation/process1.jpg",
+
+  images: [
+    "/portfolio/ventilation/store_ventilation/process1.jpg",
+    "/portfolio/ventilation/store_ventilation/process2.jpg",
+    "/portfolio/ventilation/store_ventilation/process3.jpg",
+  ],
+},
+  {
+  id: "juniper-transformation",
+
+  title: "Трансформація ялівцю",
+
+  category: "Стрижка та формування рослин",
+
+  year: "2026",
+
+  featured: true,
+
+  description:
+    "Відео процесу трансформації та формування ялівцю.",
+
+  cover:
+    "https://img.youtube.com/vi/Dh7F6F41Y4w/maxresdefault.jpg",
+
+  images: [],
+
+  videos: [
+    "https://www.youtube.com/embed/Dh7F6F41Y4w",
+  ],
+},
 ];

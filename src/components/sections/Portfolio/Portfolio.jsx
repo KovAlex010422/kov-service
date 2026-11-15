@@ -125,7 +125,7 @@ export default function Portfolio() {
           className="
             fixed
             inset-0
-            z-[999]
+            z-999
             bg-black/90
             flex
             items-center
