@@ -7,6 +7,7 @@ export default function ServiceArea() {
     "Бершадь",
     "Теплик",
     "Вінниця",
+    "Умань",
   ];
 
   return (
@@ -18,7 +19,7 @@ export default function ServiceArea() {
         </h2>
 
         <p className="text-center text-slate-600 mb-8">
-          Виїзд на об'єкти та консультації
+          Виїзд на об'єкти та консультації по домовленості
         </p>
 
         <div className="flex flex-wrap justify-center gap-3">
