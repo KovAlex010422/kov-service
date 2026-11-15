@@ -1,13 +1,27 @@
+import { projects } from "@/src/data/projects";
+
 export default function sitemap() {
+  const baseUrl =
+    "https://kov-service.vercel.app";
+
+  const projectUrls = projects.map(
+    (project) => ({
+      url: `${baseUrl}/portfolio/${project.id}`,
+      lastModified: new Date(),
+    })
+  );
+
   return [
     {
-      url: "https://kov-service.vercel.app",
+      url: baseUrl,
       lastModified: new Date(),
     },
 
     {
-      url: "https://kov-service.vercel.app/portfolio",
+      url: `${baseUrl}/portfolio`,
       lastModified: new Date(),
     },
+
+    ...projectUrls,
   ];
 }
