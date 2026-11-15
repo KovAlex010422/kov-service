@@ -231,93 +231,93 @@ export const projects = [
     ],
   },
   {
-  id: "repair-wall-1",
+    id: "repair-wall-1",
 
-  title: "Ремонт стіни",
+    title: "Ремонт стіни",
 
-  category: "Ремонт квартир",
+    category: "Ремонт квартир",
 
-  year: "2026",
+    year: "2026",
 
-  featured: false,
+    featured: false,
 
-  description:
-    "Відновлення та підготовка стіни під подальше оздоблення.",
+    description:
+      "Відновлення та підготовка стіни під подальше оздоблення.",
 
-  cover:
-    "/portfolio/apartment_repairs/repair_wall/process1.jpg",
+    cover:
+      "/portfolio/apartment_repairs/repair_wall/process1.jpg",
 
-  images: [
-    "/portfolio/apartment_repairs/repair_wall/process1.jpg",
-    "/portfolio/apartment_repairs/repair_wall/process2.jpg",
-    "/portfolio/apartment_repairs/repair_wall/process3.jpg",
-  ],
-},
-{
-  id: "heating-boiler-replacement-1",
-
-  title: "Заміна котла опалення",
-
-  category: "Опалення",
-
-  year: "2026",
-
-  featured: true,
-
-  description:
-    "Демонтаж старого та встановлення нового котла опалення.",
-
-  cover:
-    "/portfolio/apartment_repairs/heating_boiler_replacement/process2.jpg",
-
-  images: [
-    "/portfolio/apartment_repairs/heating_boiler_replacement/process2.jpg",
-  ],
-},
-{
-  id: "store-ventilation-1",
-
-  title: "Вентиляція магазину",
-
-  category: "Вентиляція",
-
-  year: "2026",
-
-  featured: true,
-
-  description:
-    "Монтаж системи вентиляції для комерційного приміщення.",
-
-  cover:
-    "/portfolio/ventilation/store_ventilation/process1.jpg",
-
-  images: [
-    "/portfolio/ventilation/store_ventilation/process1.jpg",
-    "/portfolio/ventilation/store_ventilation/process2.jpg",
-    "/portfolio/ventilation/store_ventilation/process3.jpg",
-  ],
-},
+    images: [
+      "/portfolio/apartment_repairs/repair_wall/process1.jpg",
+      "/portfolio/apartment_repairs/repair_wall/process2.jpg",
+      "/portfolio/apartment_repairs/repair_wall/process3.jpg",
+    ],
+  },
   {
-  id: "juniper-transformation",
+    id: "heating-boiler-replacement-1",
 
-  title: "Трансформація ялівцю",
+    title: "Заміна котла опалення",
 
-  category: "Стрижка та формування рослин",
+    category: "Опалення",
 
-  year: "2026",
+    year: "2026",
 
-  featured: true,
+    featured: true,
 
-  description:
-    "Відео процесу трансформації та формування ялівцю.",
+    description:
+      "Демонтаж старого та встановлення нового котла опалення.",
 
-  cover:
-    "https://img.youtube.com/vi/Dh7F6F41Y4w/maxresdefault.jpg",
+    cover:
+      "/portfolio/apartment_repairs/heating_boiler_replacement/process2.jpg",
 
-  images: [],
+    images: [
+      "/portfolio/apartment_repairs/heating_boiler_replacement/process2.jpg",
+    ],
+  },
+  {
+    id: "store-ventilation-1",
 
-  videos: [
-    "https://www.youtube.com/embed/Dh7F6F41Y4w",
-  ],
-},
+    title: "Вентиляція магазину",
+
+    category: "Вентиляція",
+
+    year: "2026",
+
+    featured: true,
+
+    description:
+      "Монтаж системи вентиляції для комерційного приміщення.",
+
+    cover:
+      "/portfolio/ventilation/store_ventilation/process1.jpg",
+
+    images: [
+      "/portfolio/ventilation/store_ventilation/process1.jpg",
+      "/portfolio/ventilation/store_ventilation/process2.jpg",
+      "/portfolio/ventilation/store_ventilation/process3.jpg",
+    ],
+  },
+  {
+    id: "juniper-transformation",
+
+    title: "Трансформація ялівцю",
+
+    category: "Стрижка та формування рослин",
+
+    year: "2026",
+
+    featured: true,
+
+    description:
+      "Відео процесу трансформації та формування ялівцю.",
+
+    cover:
+      "/portfolio/tree-care/juniper-transformation/cover.jpg",
+
+    images: [],
+
+    videos: [
+      "https://www.youtube.com/embed/Dh7F6F41Y4w",
+    ],
+  },
 ];
