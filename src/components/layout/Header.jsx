@@ -83,31 +83,31 @@ export default function Header() {
         {/* Десктопне меню */}
         <nav className="hidden md:flex items-center gap-8">
           {menuItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="
-                relative
-                text-slate-700
-                font-medium
-                transition-colors
-                duration-300
-                hover:text-orange-500
+      relative
+      text-slate-700
+      font-medium
+      transition-colors
+      duration-300
+      hover:text-orange-500
 
-                after:absolute
-                after:left-0
-                after:-bottom-1
-                after:h-[2px]
-                after:w-0
-                after:bg-orange-500
-                after:transition-all
-                after:duration-300
+      after:absolute
+      after:left-0
+      after:-bottom-1
+      after:h-[2px]
+      after:w-0
+      after:bg-orange-500
+      after:transition-all
+      after:duration-300
 
-                hover:after:w-full
-              "
+      hover:after:w-full
+    "
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -157,19 +157,18 @@ export default function Header() {
                     <SheetClose
                       key={item.href}
                     >
-                      <a
+                      <Link
                         href={item.href}
                         className="
-                          block
-                          py-3
-                          border-b
-                          border-slate-100
-                          hover:text-orange-500
-                          transition-colors
-                        "
+    block
+    py-3
+    border-b
+    border-slate-100
+    hover:text-orange-500
+  "
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     </SheetClose>
                   ))}
 
