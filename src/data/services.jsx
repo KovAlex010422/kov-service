@@ -2,6 +2,7 @@ export const services = [
   {
     id: 1,
     title: "⚡ Електрика",
+    slug: "landscape",
     items: [
       "Монтаж електропроводки",
       "Монтаж електрощитів",
@@ -14,6 +15,7 @@ export const services = [
   {
     id: 2,
     title: "🚿 Сантехніка",
+    slug: "sanitation",
     items: [
       "Заміна труб",
       "Монтаж змішувачів",
@@ -26,6 +28,7 @@ export const services = [
   {
     id: 3,
     title: "🔥 Опалення",
+    slug: "heating",
     items: [
       "Монтаж радіаторів",
       "Монтаж насосів",
@@ -37,6 +40,7 @@ export const services = [
   {
     id: 4,
     title: "❄️ Кондиціонування",
+    slug: "conditioning",
     items: [
       "Монтаж кондиціонерів",
       "Сервіс",
@@ -48,6 +52,7 @@ export const services = [
   {
     id: 5,
     title: "🌬️ Вентиляція",
+    slug: "ventilation",
     items: [
       "Монтаж вентиляції",
       "Очищення",
@@ -58,6 +63,7 @@ export const services = [
   {
     id: 6,
     title: "💧 Автополив",
+    slug: "irrigation",
     items: [
       "Hunter",
       "Rain Bird",
@@ -70,6 +76,7 @@ export const services = [
   {
     id: 7,
     title: "🌳 Догляд за садом",
+    slug: "gardening",
     items: [
       "Обрізка дерев",
       "Обрізка кущів",
@@ -81,6 +88,7 @@ export const services = [
   {
     id: 8,
     title: "🔧 Домашній майстер",
+    slug: "handyman",
     items: [
       "Збірка меблів",
       "Монтаж карнизів",

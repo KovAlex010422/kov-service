@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 import {
     Zap,
@@ -77,9 +78,17 @@ export default function Services() {
                                                 className="text-orange-500 flex-shrink-0"
                                             />
                                         )}
-                                        <h3 className="font-semibold text-lg">
-                                            {service.title}
-                                        </h3>
+                                        <Link
+                                            href={`/services/${service.slug}`}
+                                            className="
+    inline-block
+    mt-3
+    text-orange-500
+    font-medium
+  "
+                                        >
+                                            Детальніше →
+                                        </Link>
                                     </div>
 
                                     {/* Стрілочка-індикатор, яка показує стан та сигналізує про клік */}
