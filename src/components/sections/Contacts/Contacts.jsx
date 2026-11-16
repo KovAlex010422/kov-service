@@ -10,7 +10,7 @@ export default function Contacts() {
   return (
     <section
       id="contacts"
-      className="py-24 bg-orange-50"
+      className="py-24 bg-white"
     >
       <div className="max-w-5xl mx-auto px-6">
 

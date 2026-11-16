@@ -95,7 +95,53 @@ export default async function ProjectPage({
               </div>
             </>
           )}
+          <div
+            className="
+    mt-20
+    p-8
+    rounded-3xl
+    bg-orange-50
+    border
+    border-orange-100
+    text-center
+  "
+          >
+            <h2
+              className="
+      text-3xl
+      font-bold
+      mb-4
+    "
+            >
+              Сподобалась ця робота?
+            </h2>
 
+            <p
+              className="
+      text-slate-600
+      mb-6
+    "
+            >
+              Зв'яжіться з нами для консультації та
+              розрахунку вартості виконання робіт.
+            </p>
+
+            <Link
+              href="/#request"
+              className="
+      inline-block
+      bg-orange-500
+      hover:bg-orange-600
+      text-white
+      px-8
+      py-4
+      rounded-xl
+      transition
+    "
+            >
+              Замовити консультацію
+            </Link>
+          </div>
         </div>
       </main>
 

@@ -31,7 +31,15 @@ export default function PortfolioPage() {
           project.category ===
           activeCategory
       );
+  const getCount = (category) => {
+    if (category === "Усі") {
+      return projects.length;
+    }
 
+    return projects.filter(
+      (project) => project.category === category
+    ).length;
+  };
   return (
     <>
       <Header />
@@ -57,25 +65,26 @@ export default function PortfolioPage() {
             "
           >
             {categories.map((category) => (
+
               <button
                 key={category}
                 onClick={() =>
                   setActiveCategory(category)
                 }
                 className={`
-                  px-5
-                  py-2
-                  rounded-full
-                  border
-                  transition
+    px-5
+    py-2
+    rounded-full
+    border
+    transition
 
-                  ${activeCategory === category
+    ${activeCategory === category
                     ? "bg-orange-500 text-white border-orange-500"
                     : "bg-white text-slate-700 border-slate-300 hover:border-orange-500"
                   }
-                `}
+  `}
               >
-                {category}
+                {category} ({getCount(category)})
               </button>
             ))}
           </div>
