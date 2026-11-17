@@ -41,7 +41,6 @@ export default function Hero() {
           <p className="mt-6 text-xl text-slate-600">
             Електрика, сантехніка,
             опалення, вентиляція,
-            кондиціонування,
             автополив та догляд
             за територією.
           </p>
