@@ -165,7 +165,7 @@ export default function RequestForm() {
   return (
     <section
       id="request"
-      className="py-24 bg-white"
+      className="py-6 bg-white"
     >
       <div className="max-w-3xl mx-auto px-6">
 

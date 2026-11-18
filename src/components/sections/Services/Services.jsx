@@ -30,7 +30,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-20 bg-white"
+      className="py-12 bg-white"
     >
       <div className="max-w-7xl mx-auto px-6">
 

@@ -1,7 +1,6 @@
 import Header from "@/src/components/layout/Header";
 import Hero from "@/src/components/sections/Hero/Hero";
 import Services from "@/src/components/sections/Services/Services";
-import FeaturedProjects from "@/src/components/sections/FeaturedProjects/FeaturedProjects";
 import Contacts from "@/src/components/sections/Contacts/Contacts";
 import Footer from "@/src/components/sections/Footer/Footer";
 import FloatingPhone from "@/src/components/shared/FloatingPhone";
@@ -15,9 +14,8 @@ export default function Home() {
       <Header />
       <Hero />
       <Services />
-      <FeaturedProjects />
-      <RequestForm />
       <ServiceArea />
+      <RequestForm />
       <Contacts />
       <Footer />
       <FloatingPhone />

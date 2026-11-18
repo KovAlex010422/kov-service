@@ -11,7 +11,7 @@ export default function ServiceArea() {
   ];
 
   return (
-    <section className="py-16 bg-orange-50">
+    <section className="py-10 bg-orange-50">
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-3xl font-bold text-center mb-4">

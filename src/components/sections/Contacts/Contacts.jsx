@@ -10,7 +10,7 @@ export default function Contacts() {
   return (
     <section
       id="contacts"
-      className="py-24 bg-white"
+      className="pt-8 pb-8 bg-white"
     >
       <div className="max-w-5xl mx-auto px-6">
 
@@ -18,11 +18,11 @@ export default function Contacts() {
           Контакти
         </h2>
 
-        <p className="text-center text-slate-600 mb-12">
+        <p className="text-center text-slate-600 mb-6">
           Зв'яжіться з нами будь-яким зручним способом
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-2">
 
           <a
             href={`tel:${company.phone}`}
