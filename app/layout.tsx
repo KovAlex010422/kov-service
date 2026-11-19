@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "KOV Service | Дім • Сад • Сервіс у Гайсині",
     description:
       "Електрика, сантехніка, опалення, автополив та ландшафтні роботи у Гайсині та область.",
-    url: "https://kov-service.vercel.app",
+    url: "https://kov-service.vn.ua",
     siteName: "KOV Service",
     images: [
       {
