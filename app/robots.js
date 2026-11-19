@@ -4,5 +4,11 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
+
+    sitemap:
+      "https://kov-service.vn.ua/sitemap.xml",
+
+    host:
+      "https://kov-service.vn.ua",
   };
 }

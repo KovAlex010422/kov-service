@@ -2,7 +2,7 @@ import { projects } from "@/src/data/projects";
 
 export default function sitemap() {
   const baseUrl =
-    "https://kov-service.vercel.app";
+    "https://kov-service.vn.ua";
 
   const projectUrls = projects.map(
     (project) => ({

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kov-service.vercel.app"),
+  metadataBase: new URL("https://kov-service.vn.ua"),
   
   title: {
     default: "KOV Service | Електрика, сантехніка, опалення, автополив та ландшафтні роботи у Гайсині",
