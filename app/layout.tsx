@@ -12,8 +12,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "KOV Service | Електрика, сантехніка, опалення, автополив та ландшафтні роботи у Гайсині",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://kov-service.vercel.app"),
+  
+  title: {
+    default: "KOV Service | Електрика, сантехніка, опалення, автополив та ландшафтні роботи у Гайсині",
+    template: "%s | KOV Service",
+  },
 
   description:
     "Послуги електрика, сантехніка, опалення, вентиляції, автополиву та догляду за територією. Гайсин та область.",
@@ -33,21 +38,36 @@ export const metadata = {
     "підстригання живоплоту",
     "ладшафтні роботи Гайсин",
     "ландшафтний дизайн Гайсин",
-    "інженерні мережі Гайсин",
+    "инженерні мережі Гайсин",
     "майстер на годину Гайсин",
     "майстер на дім Гайсин",
     "KOV Service",
   ],
 
   openGraph: {
-    title: "KOV Service",
-
+    title: "KOV Service | Дім • Сад • Сервіс у Гайсині",
     description:
-      "Комплексні послуги для дому та подвір'я.",
-
+      "Професійний монтаж електрики, сантехніки, опалення, автополив та комплексні ландшафтні роботи. Якісно та під ключ.",
+    url: "https://kov-service.vercel.app",
+    siteName: "KOV Service",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "KOV Service — Електрика, сантехніка, опалення та ландшафтні роботи",
+      },
+    ],
     type: "website",
-
     locale: "uk_UA",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "KOV Service | Дім • Сад • Сервіс у Гайсині",
+    description:
+      "Послуги електрика, сантехніка, опалення, автополиву та догляду за територією у Гайсині.",
+    images: ["/og-image.jpg"],
   },
 };
 
