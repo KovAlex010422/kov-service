@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 
 import { company } from "@/src/data/company";
+import { MessengerLinks } from "@/src/components/shared/MessengerLinks";
 
 import {
   Sheet,
@@ -87,47 +88,48 @@ export default function Header() {
               key={item.href}
               href={item.href}
               className="
-      relative
-      text-slate-700
-      font-medium
-      transition-colors
-      duration-300
-      hover:text-orange-500
+                relative
+                text-slate-700
+                font-medium
+                transition-colors
+                duration-300
+                hover:text-orange-500
 
-      after:absolute
-      after:left-0
-      after:-bottom-1
-      after:h-[2px]
-      after:w-0
-      after:bg-orange-500
-      after:transition-all
-      after:duration-300
+                after:absolute
+                after:left-0
+                after:-bottom-1
+                after:h-[2px]
+                after:w-0
+                after:bg-orange-500
+                after:transition-all
+                after:duration-300
 
-      hover:after:w-full
-    "
+                hover:after:w-full
+              "
             >
               {item.name}
             </Link>
           ))}
         </nav>
 
-        {/* Десктоп кнопка */}
-        <a
-          href={`tel:${company.phone}`}
-          className="
-            hidden
-            md:flex
-            bg-orange-500
-            hover:bg-orange-600
-            text-white
-            px-4
-            py-2
-            rounded-xl
-            transition
-          "
-        >
-          Зателефонувати
-        </a>
+        {/* Десктоп кнопка та месенджери */}
+        <div className="hidden md:flex items-center gap-3">
+          <MessengerLinks variant="header" />
+          <a
+            href={`tel:${company.phone}`}
+            className="
+              bg-orange-500
+              hover:bg-orange-600
+              text-white
+              px-4
+              py-2
+              rounded-xl
+              transition
+            "
+          >
+            Зателефонувати
+          </a>
+        </div>
 
         {/* Мобільне меню */}
         <div className="md:hidden">
@@ -148,7 +150,7 @@ export default function Header() {
 
             <SheetContent side="right">
               <div className="mt-10">
-                <h2 className="text-xl font-bold mb-8">
+                <h2 className="text-xl font-bold mb-6">
                   Меню
                 </h2>
 
@@ -156,27 +158,34 @@ export default function Header() {
                   {menuItems.map((item) => (
                     <SheetClose
                       key={item.href}
+                      asChild
                     >
                       <Link
                         href={item.href}
                         className="
-    block
-    py-3
-    border-b
-    border-slate-100
-    hover:text-orange-500
-  "
+                          block
+                          py-3
+                          border-b
+                          border-slate-100
+                          hover:text-orange-500
+                        "
                       >
                         {item.name}
                       </Link>
                     </SheetClose>
                   ))}
 
-                  <SheetClose>
+                  {/* Месенджери в мобільному меню */}
+                  <div className="mt-4 pt-4 border-t border-slate-100 flex flex-col gap-3">
+                    <span className="text-xs text-slate-400 font-medium">Швидкий зв'язок:</span>
+                    <MessengerLinks variant="footer" />
+                  </div>
+
+                  <SheetClose asChild>
                     <a
                       href={`tel:${company.phone}`}
                       className="
-                        mt-4
+                        mt-2
                         block
                         bg-orange-500
                         hover:bg-orange-600
