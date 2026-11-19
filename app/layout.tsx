@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "KOV Service | Дім • Сад • Сервіс у Гайсині",
     description:
-      "Монтаж електрики, сантехніки, опалення, автополив та комплексні ландшафтні роботи. Якісно та під ключ.",
+      "Монтаж електрики, сантехніки, опалення та комплексні ландшафтні роботи. Якісно та під ключ.",
     url: "https://kov-service.vercel.app",
     siteName: "KOV Service",
     images: [
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "KOV Service | Дім • Сад • Сервіс у Гайсині",
     description:
-      "Послуги електрика, сантехніка, опалення, ландшафтні роботи та догляду за територією у Гайсині.",
+      "Монтаж електрики, сантехніки, опалення та комплексні ландшафтні роботи у Гайсині.",
     images: ["/og-image.jpg"],
   },
 };
