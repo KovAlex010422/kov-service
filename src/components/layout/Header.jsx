@@ -14,6 +14,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+import {
+  FaTelegramPlane,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
+
 const menuItems = [
   {
     name: "Послуги",
@@ -26,10 +32,6 @@ const menuItems = [
   {
     name: "Наші роботи",
     href: "/portfolio",
-  },
-  {
-    name: "Контакти",
-    href: "/#contacts",
   },
 ];
 
@@ -118,32 +120,17 @@ export default function Header() {
           <a
             href={`tel:${company.phone}`}
             className="
-    flex
-    items-center
-    justify-center
-    gap-3
-
-    w-full
-
-    py-4
-
-    rounded-2xl
-
     bg-orange-500
     hover:bg-orange-600
-
     text-white
-    font-semibold
-    text-lg
-
+    px-3
+    py-2
+    rounded-xl
     transition
+    text-sm
   "
           >
-            📞
-
-            <span>
-              Зателефонувати
-            </span>
+            Зателефонувати
           </a>
         </div>
 
@@ -170,8 +157,9 @@ export default function Header() {
             >
               <div className="h-full flex flex-col">
 
-                {/* Верхня частина */}
-                <div className="px-6 pt-8 pb-5 border-b">
+                {/* Верх */}
+                <div className="px-6 py-6 border-b">
+
                   <div className="flex items-center gap-3">
 
                     <div
@@ -201,12 +189,13 @@ export default function Header() {
                     </div>
 
                   </div>
+
                 </div>
 
-                {/* Пункти меню */}
-                <nav className="px-6 py-4 flex-1">
+                {/* Меню */}
+                <div className="flex-1 px-6 py-4">
 
-                  <div className="space-y-2">
+                  <nav className="flex flex-col">
 
                     {menuItems.map((item) => (
                       <SheetClose
@@ -216,30 +205,26 @@ export default function Header() {
                         <Link
                           href={item.href}
                           className="
-          flex
-          items-center
+                py-4
 
-          py-4
-          px-2
+                text-lg
+                font-medium
 
-          text-lg
-          font-medium
+                border-b
+                border-slate-100
 
-          border-b
-          border-slate-100
-
-          hover:text-orange-500
-        "
+                hover:text-orange-500
+                transition
+              "
                         >
                           {item.name}
                         </Link>
                       </SheetClose>
                     ))}
 
-                  </div>
+                  </nav>
 
-
-                  {/* Контактний блок */}
+                  {/* Контакти */}
                   <div className="mt-8">
 
                     <p
@@ -251,28 +236,30 @@ export default function Header() {
             mb-3
           "
                     >
-                      Швидкий зв'язок
+                      Швидкий зв’язок
                     </p>
 
                     <div className="flex flex-col gap-3">
 
                       <a
                         href={company.telegram}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="
-      flex
-      items-center
-      gap-3
+              flex
+              items-center
+              gap-3
 
-      py-3
-      px-4
+              px-4
+              py-3
 
-      rounded-xl
+              rounded-xl
 
-      bg-slate-50
+              border
+              border-slate-200
 
-      border
-      border-slate-200
-    "
+              hover:bg-slate-50
+            "
                       >
                         <FaTelegramPlane
                           size={22}
@@ -284,21 +271,23 @@ export default function Header() {
 
                       <a
                         href={company.whatsapp}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="
-      flex
-      items-center
-      gap-3
+              flex
+              items-center
+              gap-3
 
-      py-3
-      px-4
+              px-4
+              py-3
 
-      rounded-xl
+              rounded-xl
 
-      bg-slate-50
+              border
+              border-slate-200
 
-      border
-      border-slate-200
-    "
+              hover:bg-slate-50
+            "
                       >
                         <FaWhatsapp
                           size={22}
@@ -310,21 +299,23 @@ export default function Header() {
 
                       <a
                         href={company.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="
-      flex
-      items-center
-      gap-3
+              flex
+              items-center
+              gap-3
 
-      py-3
-      px-4
+              px-4
+              py-3
 
-      rounded-xl
+              rounded-xl
 
-      bg-slate-50
+              border
+              border-slate-200
 
-      border
-      border-slate-200
-    "
+              hover:bg-slate-50
+            "
                       >
                         <FaYoutube
                           size={22}
@@ -336,48 +327,44 @@ export default function Header() {
 
                     </div>
 
-
                   </div>
 
-                </nav>
+                </div>
 
-                {/* Нижня частина */}
+                {/* Низ */}
                 <div className="border-t p-6">
 
-                  <div className="mb-4">
+                  <div className="mb-5">
 
-                    <p className="font-semibold">
+                    <div className="font-semibold text-lg">
                       {company.phoneDisplay}
-                    </p>
+                    </div>
 
-                    <p className="text-sm text-slate-500 mt-1">
+                    <div className="text-slate-500 text-sm mt-1">
                       {company.location}
-                    </p>
+                    </div>
 
                   </div>
 
-                  <SheetClose asChild>
-                    <a
-                      href={`tel:${company.phone}`}
-                      className="
-            block
-            text-center
-
-            bg-orange-500
-            hover:bg-orange-600
-
-            text-white
-            font-medium
-
-            py-4
-            rounded-xl
-
-            transition
-          "
-                    >
-                      📞 Зателефонувати
-                    </a>
-                  </SheetClose>
+                  <div className="flex justify-center">
+                    <SheetClose asChild>
+                      <a
+                        href={`tel:${company.phone}`}
+                        className="
+        bg-orange-500
+        hover:bg-orange-600
+        text-white
+        font-medium
+        px-5
+        py-3
+        rounded-xl
+        transition
+      "
+                      >
+                        📞 Зателефонувати
+                      </a>
+                    </SheetClose>
+                  </div>
 
                 </div>
 
