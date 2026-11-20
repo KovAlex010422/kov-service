@@ -6,7 +6,7 @@ export const company = {
 
   phone: "+380937456123",
 
-  phoneDisplay: "+38-093-7-456-123",
+  phoneDisplay: "+38(093) 7 456 123",
 
   telegram: "https://t.me/KovAlex010422",
 
