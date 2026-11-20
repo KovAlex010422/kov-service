@@ -34,7 +34,7 @@ const menuItems = [
     href: "/portfolio",
   },
   {
-    name: "Придбати рослини",
+    name: "Придбати рослини у партнерів",
     href: "/shop",
   },
 ];
