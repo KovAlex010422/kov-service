@@ -306,6 +306,29 @@ export const projects = [
     ],
   },
 
+
+  {
+    id: "flowerbed-9",
+
+    title: "Хвойна ландшафтна композиція з білим щебенем та садовим декором",
+
+    category: "Ландшафтні роботи",
+
+    year: "2022",
+
+    featured: true,
+
+    description:
+      "Облаштування фігурного хвойного куточка на тлі доглянутого газону: зонування ділянки гнучкою бордюрною стрічкою з двоколірним мульчуванням — білим декоративним щебенем та дрібною галькою. Висаджено контрастну групу вічнозелених рослин, серед яких конічні ялини Коніка, висока колоновидна туя, кулясті та сланкі ялівці й золотистий барбарис, доповнені садовими скульптурами.",
+
+    cover:
+      "/portfolio/landscape/flowerbeds/flowerbed_9/process1.jpg",
+
+    images: [
+      "/portfolio/landscape/flowerbeds/flowerbed_9/process1.jpg",
+    ],
+  },
+
   {
     id: "sakura-alley-1",
 
@@ -353,6 +376,31 @@ export const projects = [
       "/portfolio/plantings/ornamental-plants/look4.jpg",
     ],
   },
+
+
+  {
+    id: "vertical-gardening-1",
+
+    title: "Вертикальне озеленення колони та перголи вічнозеленим бересклетом",
+
+    category: "Озеленення",
+
+    year: "2023",
+
+    featured: true,
+
+    description:
+      "Декорування вхідної зони будинку та водостічної труби за допомогою вертикального озеленення: сформована густа двоколірна композиція з вічнозелених сортів бересклета Форчуна із золотистим та сріблясто-білим листям, що оплітає кам'яну колону й дерев'яну шпалеру-перголу. Прикореневу зону замульчовано білим декоративним щебенем та доповнено садовим декором.",
+
+    cover:
+      "/portfolio/plantings/vertical-gardening/look1.jpg",
+
+    images: [
+      "/portfolio/plantings/vertical-gardening/look1.jpg",
+      "/portfolio/plantings/vertical-gardening/look2.jpg",
+    ],
+  },
+
 
   {
     id: "lawn-scarification-1",
