@@ -7,7 +7,6 @@ import FloatingPhone from "@/src/components/shared/FloatingPhone";
 import RequestForm from "@/src/components/sections/RequestForm/RequestForm";
 import ServiceArea from "@/src/components/sections/ServiceArea/ServiceArea";
 
-
 export default function Home() {
   return (
     <>

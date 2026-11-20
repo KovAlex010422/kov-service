@@ -33,6 +33,10 @@ const menuItems = [
     name: "Наші роботи",
     href: "/portfolio",
   },
+  {
+    name: "Придбати рослини",
+    href: "/shop",
+  },
 ];
 
 export default function Header() {
