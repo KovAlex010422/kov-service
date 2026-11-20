@@ -1,36 +1,52 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { portfolio } from "@/src/data/portfolio";
 
 export default function Portfolio() {
-  const [selectedIndex, setSelectedIndex] =
-    useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  const sortedPortfolio = useMemo(() => {
+    const greenCategories = [
+      "Озеленення",
+      "Ландшафтні роботи",
+      "Догляд за газоном",
+      "Стрижка та формування рослин",
+    ];
+
+    return [
+      ...portfolio.filter((item) => item.category === "Озеленення"),
+      ...portfolio.filter(
+        (item) =>
+          item.category !== "Озеленення" &&
+          greenCategories.includes(item.category)
+      ),
+      ...portfolio.filter(
+        (item) => !greenCategories.includes(item.category)
+      ),
+    ];
+  }, []);
 
   const nextImage = () => {
     setSelectedIndex((prev) =>
-      prev === portfolio.length - 1
-        ? 0
-        : prev + 1
+      prev === sortedPortfolio.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevImage = () => {
     setSelectedIndex((prev) =>
-      prev === 0
-        ? portfolio.length - 1
-        : prev - 1
+      prev === 0 ? sortedPortfolio.length - 1 : prev - 1
     );
   };
 
   return (
     <section
       id="portfolio"
-      className="py-24 bg-white"
+      className="pt-8 pb-24 bg-white"
     >
       <div className="max-w-7xl mx-auto px-6">
-
         <h2 className="text-4xl font-bold text-center mb-4">
           Наші роботи
         </h2>
@@ -40,11 +56,12 @@ export default function Portfolio() {
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-          {portfolio.map((item, index) => (
+          {sortedPortfolio.map((item, index) => (
             <div
               key={item.id}
               className="
+                flex
+                flex-col
                 rounded-2xl
                 overflow-hidden
                 border
@@ -54,8 +71,7 @@ export default function Portfolio() {
                 transition
               "
             >
-              <div className="relative h-64">
-
+              <div className="relative h-64 shrink-0">
                 {item.image ? (
                   <Image
                     src={item.image}
@@ -69,9 +85,7 @@ export default function Portfolio() {
                       duration-300
                       hover:scale-105
                     "
-                    onClick={() =>
-                      setSelectedIndex(index)
-                    }
+                    onClick={() => setSelectedIndex(index)}
                   />
                 ) : (
                   <div
@@ -100,28 +114,49 @@ export default function Portfolio() {
                     </div>
                   </div>
                 )}
-
               </div>
 
-              <div className="p-4">
-
-                <h3 className="font-semibold text-lg">
+              <div className="p-4 flex flex-col flex-grow">
+                <h3 className="font-semibold text-lg mb-1">
                   {item.title}
                 </h3>
 
+                {item.category && (
+                  <p className="text-orange-500 text-sm mb-2">
+                    {item.category}
+                  </p>
+                )}
+
+                {item.description && (
+                  <p className="text-slate-600 text-sm line-clamp-3">
+                    {item.description}
+                  </p>
+                )}
+
+                <Link
+                  href={`/portfolio/${item.id}`}
+                  className="
+                    mt-1
+                    inline-block
+                    text-sm
+                    font-medium
+                    text-orange-500
+                    hover:text-orange-600
+                    hover:underline
+                    transition
+                  "
+                >
+                  Читати далі →
+                </Link>
               </div>
             </div>
           ))}
-
         </div>
-
       </div>
 
       {selectedIndex !== null && (
         <div
-          onClick={() =>
-            setSelectedIndex(null)
-          }
+          onClick={() => setSelectedIndex(null)}
           className="
             fixed
             inset-0
@@ -140,17 +175,11 @@ export default function Portfolio() {
               max-w-6xl
               h-[85vh]
             "
-            onClick={(e) =>
-              e.stopPropagation()
-            }
+            onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={
-                portfolio[selectedIndex].image
-              }
-              alt={
-                portfolio[selectedIndex].title
-              }
+              src={sortedPortfolio[selectedIndex].image}
+              alt={sortedPortfolio[selectedIndex].title}
               fill
               sizes="100vw"
               className="object-contain"
@@ -158,9 +187,7 @@ export default function Portfolio() {
 
             {/* Закрити */}
             <button
-              onClick={() =>
-                setSelectedIndex(null)
-              }
+              onClick={() => setSelectedIndex(null)}
               className="
                 absolute
                 top-4
@@ -232,7 +259,7 @@ export default function Portfolio() {
                 rounded-xl
               "
             >
-              {selectedIndex + 1} / {portfolio.length}
+              {selectedIndex + 1} / {sortedPortfolio.length}
             </div>
 
             {/* Назва фото */}
@@ -249,9 +276,8 @@ export default function Portfolio() {
                 rounded-xl
               "
             >
-              {portfolio[selectedIndex].title}
+              {sortedPortfolio[selectedIndex].title}
             </div>
-
           </div>
         </div>
       )}
