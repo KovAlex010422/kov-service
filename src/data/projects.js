@@ -68,6 +68,36 @@ export const projects = [
   },
 
   {
+    id: "greenhouse-fog-irrigation-1",
+
+    title: "Монтаж системи туманного поливу в теплиці",
+
+    category: "Ландшафтні роботи",
+
+    year: "2026",
+
+    featured: true,
+
+    description:
+      "Встановлення системи туманного поливу для підтримання оптимальної вологості та мікроклімату в теплиці. Змонтовано магістралі, форсунки та елементи керування для рівномірного зволоження повітря і рослин.",
+
+    cover:
+      "/portfolio/irrigation/greenhouse-fog-irrigation-1/process9.jpg",
+
+    images: [
+      "/portfolio/irrigation/greenhouse-fog-irrigation-1/process1.jpg",
+      "/portfolio/irrigation/greenhouse-fog-irrigation-1/process2.jpg",
+      "/portfolio/irrigation/greenhouse-fog-irrigation-1/process3.jpg",
+      "/portfolio/irrigation/greenhouse-fog-irrigation-1/process4.jpg",
+      "/portfolio/irrigation/greenhouse-fog-irrigation-1/process5.jpg",
+      "/portfolio/irrigation/greenhouse-fog-irrigation-1/process6.jpg",
+      "/portfolio/irrigation/greenhouse-fog-irrigation-1/process7.jpg",
+      "/portfolio/irrigation/greenhouse-fog-irrigation-1/process8.jpg",
+      "/portfolio/irrigation/greenhouse-fog-irrigation-1/process9.jpg",
+    ],
+  },
+
+  {
     id: "flowerbed-1",
 
     title: "Декоративна клумба",
@@ -133,6 +163,194 @@ export const projects = [
     images: [
       "/portfolio/landscape/flowerbeds/flowerbed_3/process1.jpg",
       "/portfolio/landscape/flowerbeds/flowerbed_3/process2.jpg",
+    ],
+  },
+
+  {
+    id: "flowerbed-4",
+
+    title: "Клумба на присадибній ділянці декорована камінням",
+
+    category: "Ландшафтні роботи",
+
+    year: "2026",
+
+    featured: false,
+
+    description:
+      "Розробка та реалізація декоративної клумби з використанням каміння.",
+
+    cover:
+      "/portfolio/landscape/flowerbeds/flowerbed_4/process6.jpg",
+
+    images: [
+      "/portfolio/landscape/flowerbeds/flowerbed_4/process1.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_4/process2.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_4/process3.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_4/process4.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_4/process5.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_4/process6.jpg",
+    ],
+  },
+
+  {
+    id: "flowerbed-5",
+
+    title: "Клумба на присадибній ділянці декорована камінням та корою",
+
+    category: "Ландшафтні роботи",
+
+    year: "2026",
+
+    featured: false,
+
+    description:
+      "Розробка та реалізація декоративної клумби з використанням каміння та кори.",
+
+    cover:
+      "/portfolio/landscape/flowerbeds/flowerbed_5/process9.jpg",
+
+    images: [
+      "/portfolio/landscape/flowerbeds/flowerbed_5/process1.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_5/process2.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_5/process3.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_5/process4.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_5/process5.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_5/process6.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_5/process7.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_5/process8.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_5/process9.jpg",
+    ],
+  },
+
+  {
+    id: "flowerbed-6",
+
+    title: "Клумба під вікнами офісної будівлі декорована камінням",
+
+    category: "Ландшафтні роботи",
+
+    year: "2024",
+
+    featured: false,
+
+    description:
+      "Розробка та реалізація декоративної клумби з використанням каміння.",
+
+    cover:
+      "/portfolio/landscape/flowerbeds/flowerbed_6/process4.jpg",
+
+    images: [
+      "/portfolio/landscape/flowerbeds/flowerbed_6/process1.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_6/process2.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_6/process3.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_6/process4.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_6/process5.jpg",
+    ],
+    videos: [
+      "https://www.youtube.com/embed/-uPjnwtRWkQ?sttick=0",
+    ],
+  },
+
+  {
+    id: "flowerbed-7",
+
+    title: "Комплексне озеленення двору та створення рокарію",
+
+    category: "Ландшафтні роботи",
+
+    year: "2026",
+
+    featured: true,
+
+    description:
+      "Повний цикл ландшафтного облаштування прибудинкової території: підготовка ґрунту та укладання рулонного газону, створення центральної альпійської гірки (рокарію) з природним камінням та хвойними рослинами, прокладання покрокової доріжки з плаского каменю, а також висадка квітучих кущів гортензії й багаторічників вздовж паркану з мульчуванням корою та облаштуванням зони навколо технічного люка.",
+
+    cover:
+      "/portfolio/landscape/flowerbeds/flowerbed_7/process5.jpg",
+
+    images: [
+      "/portfolio/landscape/flowerbeds/flowerbed_7/process0.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_7/process1.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_7/process2.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_7/process3.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_7/process4.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_7/process5.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_7/process6.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_7/process7.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_7/process8.jpg",
+    ],
+  },
+
+  {
+    id: "flowerbed-8",
+
+    title: "Багатоярусний міксбордер з покроковою доріжкою біля будинку",
+
+    category: "Ландшафтні роботи",
+
+    year: "2026",
+
+    featured: true,
+
+    description:
+      "Оформлення ландшафтної композиції вздовж цегляного фасаду будинку: створення багатоярусного міксбордера з контрастних декоративних кущів (барбариси, пухироплідники, верба Хакуро-Нішикі), злаків, ялівців, рясної посадки гортензій та яскравого фіолетового килима ґрунтопокривних рослин. Композицію доповнено вигнутою покроковою доріжкою з натурального плаского каменю на тлі білої декоративної крихти та мульчуванням ґрунту корою.",
+
+    cover:
+      "/portfolio/landscape/flowerbeds/flowerbed_8/process3.jpg",
+
+    images: [
+      "/portfolio/landscape/flowerbeds/flowerbed_8/process1.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_8/process2.jpg",
+      "/portfolio/landscape/flowerbeds/flowerbed_8/process3.jpg",
+    ],
+  },
+
+  {
+    id: "sakura-alley-1",
+
+    title: "Висадка алеї колоновидних сакур",
+
+    category: "Озеленення",
+
+    year: "2024",
+
+    featured: true,
+
+    description:
+      "Висадка ряду квітучих колоновидних сакур уздовж пішохідної доріжки на газоні з фіксацією на опори.",
+
+    cover:
+      "/portfolio/plantings/sakura-alley/look2.jpg",
+
+    images: [
+      "/portfolio/plantings/sakura-alley/look1.jpg",
+      "/portfolio/plantings/sakura-alley/look2.jpg",
+    ],
+  },
+
+  {
+    id: "garden-care-1",
+
+    title: "Сезонний догляд та формування декоративних рослин",
+
+    category: "Озеленення",
+
+    year: "2026",
+
+    featured: true,
+
+    description:
+      "Догляд за декоративними насадженнями на присадибній ділянці: молода магнолія з великими набряклими бутонами активно готується до рясного весняного цвітіння, пишний білий кущ спіреї сформований на спеціальному металевому каркасі для підтримки ідеальної крони, а ялівець, якому ще торік було надано фігурної форми в стилі нівакі, вже встиг відрости та потребує планової коригувальної стрижки.",
+
+    cover:
+      "/portfolio/plantings/ornamental-plants/look2.jpg",
+
+    images: [
+      "/portfolio/plantings/ornamental-plants/look1.jpg",
+      "/portfolio/plantings/ornamental-plants/look2.jpg",
+      "/portfolio/plantings/ornamental-plants/look3.jpg",
+      "/portfolio/plantings/ornamental-plants/look4.jpg",
     ],
   },
 
@@ -230,6 +448,35 @@ export const projects = [
       "/portfolio/landscape/lawn/turf_laying_3/process4.jpg",
     ],
   },
+
+  {
+    id: "turf-laying-4",
+
+    title: "Комплексна підготовка ділянки, монтаж системи поливу та укладання рулонного газону",
+
+    category: "Ландшафтні роботи",
+
+    year: "2020",
+
+    featured: true,
+
+    description:
+      "Поетапне облаштування прибудинкової території: прокладання траншей і монтаж системи автоматичного поливу, завезення та вирівнювання родючого ґрунту, підготовка посадкових лунок для майбутніх дерев, а також укладання рулонного газону. Фотографії після повного завершення робіт будуть додані згодом.",
+
+    cover:
+      "/portfolio/landscape/lawn/turf_laying_4/process6.jpg",
+
+    images: [
+      "/portfolio/landscape/lawn/turf_laying_4/process1.jpg",
+      "/portfolio/landscape/lawn/turf_laying_4/process2.jpg",
+      "/portfolio/landscape/lawn/turf_laying_4/process3.jpg",
+      "/portfolio/landscape/lawn/turf_laying_4/process4.jpg",
+      "/portfolio/landscape/lawn/turf_laying_4/process5.jpg",
+      "/portfolio/landscape/lawn/turf_laying_4/process6.jpg",
+    ],
+  },
+
+
   {
     id: "repair-wall-1",
 
