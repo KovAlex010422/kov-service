@@ -3,12 +3,8 @@ import {
   MapPin,
   MessageCircle,
   Send,
-  Play,
 } from "lucide-react";
 
-
-import { FaTelegramPlane } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
 

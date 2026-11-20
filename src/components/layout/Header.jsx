@@ -148,59 +148,206 @@ export default function Header() {
               <Menu size={28} />
             </SheetTrigger>
 
-            <SheetContent side="right">
-              <div className="mt-10">
-                <h2 className="text-xl font-bold mb-6">
-                  Меню
-                </h2>
+            <SheetContent
+              side="right"
+              className="w-[85vw] sm:w-[420px] p-0"
+            >
+              <div className="h-full flex flex-col">
 
-                <nav className="flex flex-col gap-4">
-                  {menuItems.map((item) => (
-                    <SheetClose
-                      key={item.href}
-                      asChild
+                {/* Верхня частина */}
+                <div className="px-6 pt-8 pb-5 border-b">
+                  <div className="flex items-center gap-3">
+
+                    <div
+                      className="
+            w-10
+            h-10
+            rounded-xl
+            bg-orange-500
+            text-white
+            flex
+            items-center
+            justify-center
+            font-bold
+          "
                     >
-                      <Link
-                        href={item.href}
-                        className="
-                          block
-                          py-3
-                          border-b
-                          border-slate-100
-                          hover:text-orange-500
-                        "
-                      >
-                        {item.name}
-                      </Link>
-                    </SheetClose>
-                  ))}
+                      K
+                    </div>
 
-                  {/* Месенджери в мобільному меню */}
-                  <div className="mt-4 pt-4 border-t border-slate-100 flex flex-col gap-3">
-                    <span className="text-xs text-slate-400 font-medium">Швидкий зв'язок:</span>
-                    <MessengerLinks variant="footer" />
+                    <div>
+                      <div className="font-bold text-lg">
+                        KOV Service
+                      </div>
+
+                      <div className="text-sm text-slate-500">
+                        Дім • Сад • Сервіс
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* Пункти меню */}
+                <nav className="px-6 py-4 flex-1">
+
+                  <div className="space-y-1">
+
+                    {menuItems.map((item) => (
+                      <SheetClose
+                        key={item.href}
+                        asChild
+                      >
+                        <Link
+                          href={item.href}
+                          className="
+                flex
+                items-center
+                py-4
+                px-2
+                rounded-xl
+
+                text-lg
+                font-medium
+
+                hover:bg-orange-50
+                hover:text-orange-500
+
+                transition
+              "
+                        >
+                          {item.name}
+                        </Link>
+                      </SheetClose>
+                    ))}
+
+                  </div>
+
+                  {/* Контактний блок */}
+                  <div className="mt-8">
+
+                    <p
+                      className="
+            text-xs
+            uppercase
+            tracking-wider
+            text-slate-400
+            mb-3
+          "
+                    >
+                      Швидкий зв'язок
+                    </p>
+
+                    <div className="flex flex-col gap-3">
+
+                      <a
+                        href={company.telegram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+              flex
+              items-center
+              justify-center
+
+              py-3
+
+              rounded-xl
+
+              bg-[#229ED9]
+              text-white
+              font-medium
+            "
+                      >
+                        Telegram
+                      </a>
+
+                      <a
+                        href={company.whatsapp}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+              flex
+              items-center
+              justify-center
+
+              py-3
+
+              rounded-xl
+
+              bg-[#25D366]
+              text-white
+              font-medium
+            "
+                      >
+                        WhatsApp
+                      </a>
+
+                      <a
+                        href={company.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+              flex
+              items-center
+              justify-center
+
+              py-3
+
+              rounded-xl
+
+              bg-[#FF0000]
+              text-white
+              font-medium
+            "
+                      >
+                        YouTube
+                      </a>
+
+                    </div>
+
+                  </div>
+
+                </nav>
+
+                {/* Нижня частина */}
+                <div className="border-t p-6">
+
+                  <div className="mb-4">
+
+                    <p className="font-semibold">
+                      {company.phoneDisplay}
+                    </p>
+
+                    <p className="text-sm text-slate-500 mt-1">
+                      {company.location}
+                    </p>
+
                   </div>
 
                   <SheetClose asChild>
                     <a
                       href={`tel:${company.phone}`}
                       className="
-                        mt-2
-                        block
-                        bg-orange-500
-                        hover:bg-orange-600
-                        text-white
-                        px-4
-                        py-3
-                        rounded-xl
-                        text-center
-                        transition
-                      "
+            block
+            text-center
+
+            bg-orange-500
+            hover:bg-orange-600
+
+            text-white
+            font-medium
+
+            py-4
+            rounded-xl
+
+            transition
+          "
                     >
-                      Зателефонувати
+                      📞 Зателефонувати
                     </a>
                   </SheetClose>
-                </nav>
+
+                </div>
+
               </div>
             </SheetContent>
           </Sheet>
