@@ -3,7 +3,15 @@ import {
   MapPin,
   MessageCircle,
   Send,
+  Play,
 } from "lucide-react";
+
+
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+
+
 import { company } from "@/src/data/company";
 
 export default function Contacts() {
@@ -22,8 +30,9 @@ export default function Contacts() {
           Зв'яжіться з нами будь-яким зручним способом
         </p>
 
-        <div className="grid md:grid-cols-2 gap-2">
+        <div className="grid md:grid-cols-2 gap-4">
 
+          {/* Телефон */}
           <a
             href={`tel:${company.phone}`}
             className="
@@ -51,9 +60,11 @@ export default function Contacts() {
             </div>
           </a>
 
+          {/* Telegram */}
           <a
             href={company.telegram}
             target="_blank"
+            rel="noopener noreferrer"
             className="
               bg-white
               p-6
@@ -79,8 +90,11 @@ export default function Contacts() {
             </div>
           </a>
 
+          {/* WhatsApp */}
           <a
-            href={company.viber}
+            href={company.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               bg-white
               p-6
@@ -97,7 +111,7 @@ export default function Contacts() {
 
             <div>
               <h3 className="font-semibold">
-                Viber
+                WhatsApp
               </h3>
 
               <p className="text-slate-600">
@@ -106,6 +120,37 @@ export default function Contacts() {
             </div>
           </a>
 
+          {/* YouTube */}
+          <a
+            href={company.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              bg-white
+              p-6
+              rounded-2xl
+              shadow-sm
+              hover:shadow-lg
+              transition
+              flex
+              gap-4
+              items-center
+            "
+          >
+            < FaYoutube className="text-orange-500" />
+
+            <div>
+              <h3 className="font-semibold">
+                YouTube
+              </h3>
+
+              <p className="text-slate-600">
+                Переглянути наші відео
+              </p>
+            </div>
+          </a>
+
+          {/* Локація */}
           <div
             className="
               bg-white
@@ -115,6 +160,7 @@ export default function Contacts() {
               flex
               gap-4
               items-center
+              md:col-span-2
             "
           >
             <MapPin className="text-orange-500" />
