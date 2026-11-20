@@ -195,7 +195,7 @@ export default function Header() {
                 {/* Меню */}
                 <div className="flex-1 px-6 py-4">
 
-                  <nav className="flex flex-col gap-3">
+                  <nav className="flex flex-col gap-4">
 
                     {menuItems.map((item) => (
                       <SheetClose
@@ -205,19 +205,29 @@ export default function Header() {
                         <Link
                           href={item.href}
                           className="
-  py-4
-  px-3
+          flex
+          items-center
+          justify-center
 
-  text-lg
-  font-medium
+          px-4
+          py-4
 
-  rounded-xl
+          text-xl
+          font-semibold
 
-  hover:bg-orange-50
-  hover:text-orange-500
+          rounded-2xl
 
-  transition
-"
+          border
+          border-slate-200
+
+          bg-slate-50
+
+          hover:bg-orange-50
+          hover:border-orange-300
+          hover:text-orange-500
+
+          transition
+        "
                         >
                           {item.name}
                         </Link>
