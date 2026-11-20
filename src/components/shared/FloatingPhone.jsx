@@ -3,7 +3,7 @@ import { Phone } from "lucide-react";
 export default function FloatingPhone() {
   return (
     <a
-      href="tel:+380000000000"
+      href="tel:+380937456123"
       className="
         fixed
         bottom-6

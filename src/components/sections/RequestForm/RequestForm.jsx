@@ -211,7 +211,7 @@ export default function RequestForm() {
               name="phone"
               value={form.phone}
               onChange={handleChange}
-              placeholder="+38 (067) 123-45-67"
+              placeholder="Ваш номер телефону"
               required
               className="
                 w-full
