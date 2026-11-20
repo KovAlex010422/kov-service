@@ -118,16 +118,32 @@ export default function Header() {
           <a
             href={`tel:${company.phone}`}
             className="
-              bg-orange-500
-              hover:bg-orange-600
-              text-white
-              px-4
-              py-2
-              rounded-xl
-              transition
-            "
+    flex
+    items-center
+    justify-center
+    gap-3
+
+    w-full
+
+    py-4
+
+    rounded-2xl
+
+    bg-orange-500
+    hover:bg-orange-600
+
+    text-white
+    font-semibold
+    text-lg
+
+    transition
+  "
           >
-            Зателефонувати
+            📞
+
+            <span>
+              Зателефонувати
+            </span>
           </a>
         </div>
 
@@ -190,7 +206,7 @@ export default function Header() {
                 {/* Пункти меню */}
                 <nav className="px-6 py-4 flex-1">
 
-                  <div className="space-y-1">
+                  <div className="space-y-2">
 
                     {menuItems.map((item) => (
                       <SheetClose
@@ -200,20 +216,20 @@ export default function Header() {
                         <Link
                           href={item.href}
                           className="
-                flex
-                items-center
-                py-4
-                px-2
-                rounded-xl
+          flex
+          items-center
 
-                text-lg
-                font-medium
+          py-4
+          px-2
 
-                hover:bg-orange-50
-                hover:text-orange-500
+          text-lg
+          font-medium
 
-                transition
-              "
+          border-b
+          border-slate-100
+
+          hover:text-orange-500
+        "
                         >
                           {item.name}
                         </Link>
@@ -221,6 +237,7 @@ export default function Header() {
                     ))}
 
                   </div>
+
 
                   {/* Контактний блок */}
                   <div className="mt-8">
@@ -241,68 +258,84 @@ export default function Header() {
 
                       <a
                         href={company.telegram}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="
-              flex
-              items-center
-              justify-center
+      flex
+      items-center
+      gap-3
 
-              py-3
+      py-3
+      px-4
 
-              rounded-xl
+      rounded-xl
 
-              bg-[#229ED9]
-              text-white
-              font-medium
-            "
+      bg-slate-50
+
+      border
+      border-slate-200
+    "
                       >
-                        Telegram
+                        <FaTelegramPlane
+                          size={22}
+                          color="#229ED9"
+                        />
+
+                        <span>Telegram</span>
                       </a>
 
                       <a
                         href={company.whatsapp}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="
-              flex
-              items-center
-              justify-center
+      flex
+      items-center
+      gap-3
 
-              py-3
+      py-3
+      px-4
 
-              rounded-xl
+      rounded-xl
 
-              bg-[#25D366]
-              text-white
-              font-medium
-            "
+      bg-slate-50
+
+      border
+      border-slate-200
+    "
                       >
-                        WhatsApp
+                        <FaWhatsapp
+                          size={22}
+                          color="#25D366"
+                        />
+
+                        <span>WhatsApp</span>
                       </a>
 
                       <a
                         href={company.youtube}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="
-              flex
-              items-center
-              justify-center
+      flex
+      items-center
+      gap-3
 
-              py-3
+      py-3
+      px-4
 
-              rounded-xl
+      rounded-xl
 
-              bg-[#FF0000]
-              text-white
-              font-medium
-            "
+      bg-slate-50
+
+      border
+      border-slate-200
+    "
                       >
-                        YouTube
+                        <FaYoutube
+                          size={22}
+                          color="#FF0000"
+                        />
+
+                        <span>YouTube</span>
                       </a>
 
                     </div>
+
 
                   </div>
 
