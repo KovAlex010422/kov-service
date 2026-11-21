@@ -20,5 +20,6 @@ export const company = {
 
   whatsapp: "https://wa.me/380937456123",
 
-  youtube: "https://youtube.com/UChfB2wlQY6OJI88DS84hK1w",
+youtube: "https://www.youtube.com/channel/UChfB2wlQY6OJI88DS84hK1w",
+
 };
