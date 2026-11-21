@@ -146,12 +146,59 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: LayoutProps<"/">) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "KOV Service",
+    "image": "https://kov-service.vn.ua/og-image.jpg",
+    "@id": "https://kov-service.vn.ua/#business",
+    "url": "https://kov-service.vn.ua",
+    "telephone": "+380937456123",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Гайсин",
+      "addressRegion": "Вінницька область",
+      "addressCountry": "UA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.8105,
+      "longitude": 29.3878
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Гайсин" },
+      { "@type": "AdministrativeArea", "name": "Ладижин" },
+      { "@type": "AdministrativeArea", "name": "Вінницька область" }
+    ]
+  };
+
   return (
     <html
       lang="uk"
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         {children}
       </body>
